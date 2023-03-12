@@ -13,8 +13,8 @@ use num::Complex;
 fn main() {
     let args: Vec<String> = std::env::args().collect();
     if args.len() != 7 {
-        writeln!(std::io::stderr(), "mandelbrot_set FILE THREADS LIMIT PIXELS UPPER_LEFT LOWER_RIGHT").unwrap();
-        writeln!(std::io::stderr(), "example: mandelbrot_set pic.png 1500x750 -1.0,1.0 1.0,-1.0").unwrap();
+        writeln!(std::io::stderr(), "mandelbrot_set DEST THREADS LIMIT PIXELS UPPER_LEFT LOWER_RIGHT").unwrap();
+        writeln!(std::io::stderr(), "example: mandelbrot_set dest.png 16 100 3000x2000 -2.0,1.0 1.0,-1.0").unwrap();
         std::process::exit(1);
     }
     let filename = &args[1];
